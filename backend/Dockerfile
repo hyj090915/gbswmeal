@@ -6,4 +6,4 @@ RUN ./gradlew bootJar -x test --no-daemon
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=builder /app/build/libs/*.jar app.jar
-ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Xmx256m", "-Xms64m", "-Dspring.profiles.active=prod", "-jar", "app.jar"]

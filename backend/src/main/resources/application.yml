@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/gbswmeal?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: gbswmeal_user
+    password: gbswmeal1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+  scheduling:
+    enabled: true
+
+jwt:
+  secret: gbswmeal-secret-key-must-be-at-least-256-bits-long-for-hs256
+  expiration: 86400000
+
+neis:
+  api:
+    base-url: https://open.neis.go.kr/hub
+    atpt-code: R10
+    school-code: 8750829
+
+server:
+  port: 8080
+
+allowed:
+  origins: http://localhost:5173

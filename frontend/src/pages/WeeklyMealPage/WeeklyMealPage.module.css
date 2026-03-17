@@ -1,0 +1,101 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dayCol {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding: 8px;
+  background: #f7fafc;
+}
+
+.today {
+  background: #ebf4ff;
+  outline: 2px solid #667eea;
+}
+
+.saturday {
+  background: #fffaf0;
+}
+
+.saturday .dayLabel {
+  color: #dd6b20;
+}
+
+.dayLabel {
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  color: #667eea;
+  margin-bottom: 2px;
+}
+
+.today .dayLabel {
+  color: #553c9a;
+}
+
+.dayDate {
+  text-align: center;
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 8px;
+}
+
+.noMeal {
+  text-align: center;
+  color: #a0aec0;
+  font-size: 13px;
+  padding: 20px 0;
+}
+
+.skeleton {
+  height: 120px;
+  background: linear-gradient(90deg, #e2e8f0 25%, #edf2f7 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.error {
+  color: #e53e3e;
+  margin-bottom: 16px;
+}

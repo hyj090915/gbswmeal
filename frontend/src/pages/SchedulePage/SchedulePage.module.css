@@ -1,0 +1,203 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d3748;
+  min-width: 180px;
+  text-align: center;
+}
+
+.navBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.navBtn:hover {
+  background: #f7fafc;
+}
+
+.loadingBar {
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  background-size: 200% 100%;
+  animation: slide 1s infinite linear;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+@keyframes slide {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.weekday {
+  background: #f7fafc;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+.sun { color: #e53e3e; }
+.sat { color: #4299e1; }
+
+.emptyCell {
+  background: #fafafa;
+  min-height: 80px;
+}
+
+.cell {
+  background: #fff;
+  min-height: 80px;
+  padding: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  position: relative;
+}
+
+.cell:hover {
+  background: #f7fafc;
+}
+
+.todayCell {
+  background: #ebf4ff;
+}
+
+.selectedCell {
+  background: #e9d8fd !important;
+  outline: 2px solid #805ad5;
+  outline-offset: -2px;
+}
+
+.sunCell .dayNum { color: #e53e3e; }
+.satCell .dayNum { color: #4299e1; }
+
+.dayNum {
+  font-weight: 700;
+  font-size: 14px;
+  color: #2d3748;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dots {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.mealDot {
+  font-size: 11px;
+}
+
+.previewLine {
+  font-size: 10px;
+  color: #718096;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  .previewLine { display: none; }
+  .cell { min-height: 60px; }
+}
+
+/* 상세 패널 */
+.detail {
+  margin-top: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+.detailTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.noMeal {
+  color: #a0aec0;
+  text-align: center;
+  padding: 20px;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .detailGrid { grid-template-columns: 1fr; }
+}
+
+.detailCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+  background: #f7fafc;
+}
+
+.detailType {
+  font-weight: 700;
+  font-size: 15px;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.detailDishes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.detailDishes li {
+  font-size: 13px;
+  color: #4a5568;
+  padding: 2px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.detailCal {
+  font-size: 12px;
+  color: #e53e3e;
+  font-weight: 600;
+  margin-top: 6px;
+}

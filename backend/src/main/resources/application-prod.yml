@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+neis:
+  api:
+    base-url: https://open.neis.go.kr/hub
+    atpt-code: R10
+    school-code: 8750829
+
+server:
+  port: ${PORT:8080}
+
+allowed:
+  origins: ${ALLOWED_ORIGINS:http://localhost:5173}

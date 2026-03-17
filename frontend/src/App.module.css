@@ -1,0 +1,79 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+  color: #667eea;
+  margin-right: 8px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 14px;
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.link:hover {
+  background: #f7fafc;
+}
+
+.activeLink {
+  text-decoration: none;
+  font-size: 14px;
+  color: #667eea;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #ebf4ff;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.email {
+  font-size: 13px;
+  color: #718096;
+}
+
+.logoutBtn {
+  padding: 6px 14px;
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #718096;
+}
+
+.loginBtn {
+  padding: 6px 14px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}

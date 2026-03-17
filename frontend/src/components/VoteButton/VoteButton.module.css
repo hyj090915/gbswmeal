@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  border-color: #4299e1;
+}
+
+.btn.active {
+  background: #ebf8ff;
+  border-color: #4299e1;
+  color: #2b6cb0;
+  font-weight: 700;
+}
+
+.dislike:hover {
+  border-color: #fc8181;
+}
+
+.dislike.active {
+  background: #fff5f5;
+  border-color: #fc8181;
+  color: #c53030;
+}
+
+.reasons {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f7fafc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.reasons p {
+  width: 100%;
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+.reasonBtn {
+  padding: 6px 14px;
+  border: 1px solid #fc8181;
+  border-radius: 16px;
+  background: #fff;
+  color: #c53030;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.reasonBtn:hover {
+  background: #fff5f5;
+}
+
+.cancelBtn {
+  padding: 6px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  color: #718096;
+}

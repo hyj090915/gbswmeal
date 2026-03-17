@@ -1,0 +1,106 @@
+.wrapper {
+  margin-top: 24px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.form {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #f7fafc;
+}
+
+.stars {
+  margin-bottom: 8px;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #cbd5e0;
+  padding: 0 2px;
+}
+
+.star.on {
+  color: #f6ad55;
+}
+
+.textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  margin-top: 8px;
+  padding: 8px 20px;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.email {
+  font-weight: 600;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+.commentRating {
+  color: #f6ad55;
+  font-size: 13px;
+}
+
+.date {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-left: auto;
+}
+
+.content {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0;
+}
+
+.deleteBtn {
+  margin-top: 6px;
+  background: none;
+  border: none;
+  color: #fc8181;
+  cursor: pointer;
+  font-size: 12px;
+}

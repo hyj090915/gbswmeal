@@ -33,7 +33,7 @@ export function SchedulePage() {
   const { meals, loading } = useMonthlyMeal(year, month);
   const grouped = groupByDate(meals);
   const cells = getDaysInMonth(year, month);
-  const today = now.toISOString().slice(0, 10);
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 
   const prevMonth = () => {
     setSelected(null);

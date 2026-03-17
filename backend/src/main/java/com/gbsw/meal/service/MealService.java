@@ -38,11 +38,10 @@ public class MealService {
                 .stream().map(this::toResponse).collect(Collectors.toList());
     }
 
-    // 전체 급식표: 과거/미래 관계없이 해당 달의 누락 날짜를 개별 수집
+    // 전체 급식표: DB에 있는 데이터만 반환 (자동 fetch X - 타임아웃 방지)
     public List<MealResponse> getMonthlyMeals(int year, int month) {
         LocalDate start = LocalDate.of(year, month, 1);
         LocalDate end = start.withDayOfMonth(start.lengthOfMonth());
-        fetchMissingDays(start, end);
         return mealRepository.findByMealDateBetweenOrderByMealDateAscMealTypeAsc(start, end)
                 .stream().map(this::toResponse).collect(Collectors.toList());
     }

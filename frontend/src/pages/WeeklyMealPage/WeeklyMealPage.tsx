@@ -6,6 +6,13 @@ import styles from './WeeklyMealPage.module.css';
 const DAY_NAMES = ['월', '화', '수', '목', '금', '토'];
 const MEAL_ORDER: Record<string, number> = { '조식': 0, '중식': 1, '석식': 2 };
 
+function toLocalDateStr(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
 function getWeekDates(): string[] {
   const today = new Date();
   const day = today.getDay(); // 0=일
@@ -14,7 +21,7 @@ function getWeekDates(): string[] {
   return Array.from({ length: 6 }, (_, i) => {
     const d = new Date(monday);
     d.setDate(monday.getDate() + i);
-    return d.toISOString().slice(0, 10);
+    return toLocalDateStr(d);
   });
 }
 
@@ -29,7 +36,7 @@ function groupByDate(meals: Meal[]): Record<string, Meal[]> {
 export function WeeklyMealPage() {
   const { meals, loading, error } = useWeeklyMeal();
   const weekDates = getWeekDates();
-  const today = new Date().toISOString().slice(0, 10);
+  const today = toLocalDateStr(new Date());
   const grouped = groupByDate(meals);
 
   return (
